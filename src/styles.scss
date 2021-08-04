@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@ag-grid-community/all-modules/dist/styles/ag-grid.css";
+@import "@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+.bg-primary {
+    background-color: lightskyblue;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.ver-center-div {
+    display: flex;
+    align-items: center;
+}
+
+.editable-cell {
+    border: 0.01em solid gray !important;
+    background-color: lightcyan;
+}
+
+.editable-dropdown-cell {
+    @extend .editable-cell;
+}
+
+.editable-dropdown-cell::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    // z-index: -1; /* this will set it in background so when user click onit you will get cell-click event as if user would normally click on cell */
+}
+
+.border-danger {
+    border: 0.1em solid red !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
